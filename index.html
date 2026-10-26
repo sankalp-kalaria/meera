@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Electronics engineering, PCB repair, industrial electronics servicing, circuit board trading and machinery maintenance.">
+  <meta name="theme-color" content="#071526">
+  <title>CircuitForge Engineering | Electronics Repair & Industrial Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#071526;--navy2:#0b2036;--panel:#102a43;--cyan:#55e6df;--lime:#c8ff68;--white:#f5f8fc;--muted:#a8b8c9;--line:rgba(255,255,255,.12);--shadow:0 20px 60px rgba(0,0,0,.25)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;line-height:1.65}h1,h2,h3,.brand,.eyebrow{font-family:'Space Grotesk',sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button,input,textarea,select{font:inherit}
+    .container{width:min(1160px,92%);margin:auto}.topline{background:#04101e;color:#c4d4e4;font-size:.82rem;padding:9px 0}.topline .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.topline strong{color:var(--lime)}
+    header{position:sticky;top:0;z-index:50;background:rgba(7,21,38,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:1.05rem;font-weight:700;letter-spacing:-.03em}.brand-mark{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--lime));display:grid;place-items:center;color:#061627;font-size:1.25rem;font-weight:700;box-shadow:0 0 25px #55e6df30}.brand small{display:block;font:500 .65rem 'DM Sans';color:var(--muted);letter-spacing:.14em;text-transform:uppercase}.navlinks{display:flex;align-items:center;gap:25px;font-size:.9rem;color:#d4dfeb}.navlinks a:hover{color:var(--cyan)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}.nav-cta,.btn-primary{background:var(--lime);color:#071526}.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0004}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 12px}
+    .hero{position:relative;overflow:hidden;padding:92px 0 80px;background:radial-gradient(ellipse at 80% 30%,#0d5863 0%,transparent 35%),linear-gradient(135deg,#071526,#0a1e33 60%,#102b40)}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(85,230,223,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(85,230,223,.055) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to right,transparent,black)}.hero-grid{position:relative;display:grid;grid-template-columns:1.03fr .97fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.eyebrow:before{content:"";width:24px;height:2px;background:var(--lime)}h1{font-size:clamp(2.7rem,5.6vw,5rem);line-height:1.02;letter-spacing:-.065em;margin:20px 0}.hero h1 span{color:var(--cyan)}.hero-copy{max-width:590px;color:#b8c8d8;font-size:1.08rem}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin:29px 0 28px}.btn-secondary{border:1px solid #ffffff30;color:var(--white);background:#ffffff08}.btn-secondary:hover{background:#ffffff14}.hero-points{display:flex;gap:20px;flex-wrap:wrap;color:#dce6ef;font-size:.85rem}.hero-points span{display:flex;align-items:center;gap:7px}.check{color:var(--lime);font-weight:900}.hero-visual{position:relative}.hero-image{height:490px;width:100%;object-fit:cover;border-radius:24px;border:1px solid #ffffff30;box-shadow:var(--shadow);filter:saturate(.85)}.image-overlay{position:absolute;inset:0;border-radius:24px;background:linear-gradient(0deg,#061526cc,transparent 60%)}.float-card{position:absolute;bottom:24px;left:-25px;background:#102a43ed;border:1px solid #ffffff28;border-radius:15px;padding:17px 20px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}.float-card strong{display:block;font:600 1.05rem 'Space Grotesk'}.float-card small{color:var(--muted)}.status-dot{display:inline-block;width:8px;height:8px;background:var(--lime);border-radius:50%;margin-right:7px;box-shadow:0 0 10px var(--lime)}
+    .trust-strip{border-block:1px solid var(--line);background:#091b2d;padding:22px 0}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.trust-item{display:flex;align-items:center;gap:12px;color:#c9d7e4;font-size:.9rem}.trust-icon{width:40px;height:40px;display:grid;place-items:center;border:1px solid #55e6df40;background:#55e6df0d;color:var(--cyan);border-radius:12px;font-size:1.2rem}
+    section{padding:90px 0}.section-head{max-width:700px;margin-bottom:38px}.section-head.center{text-align:center;margin-inline:auto}.section-head.center .eyebrow{justify-content:center}.section-head h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.05em;line-height:1.12;margin:15px 0}.section-head p{color:var(--muted);margin:0;font-size:1.02rem}.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{background:linear-gradient(145deg,#102a43,#0b2035);border:1px solid var(--line);border-radius:18px;padding:26px;transition:transform .3s,border-color .3s,background .3s;position:relative;overflow:hidden}.service-card:hover{transform:translateY(-7px);border-color:#55e6df80;background:linear-gradient(145deg,#14354e,#0b2035)}.service-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:#55e6df12;color:var(--cyan);font-size:1.55rem;margin-bottom:20px}.service-card h3{font-size:1.2rem;margin:0 0 9px}.service-card p{font-size:.92rem;color:var(--muted);margin:0 0 18px}.text-link{font-size:.88rem;color:var(--lime);font-weight:700}.text-link span{display:inline-block;transition:transform .2s}.text-link:hover span{transform:translateX(5px)}
+    .dark-section{background:#091b2d;border-block:1px solid var(--line)}.equipment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.equipment-card{border-radius:18px;overflow:hidden;background:#10263b;border:1px solid var(--line);transition:transform .3s}.equipment-card:hover{transform:translateY(-6px)}.equipment-card img{height:205px;width:100%;object-fit:cover;transition:transform .6s}.equipment-card:hover img{transform:scale(1.04)}.equipment-body{padding:22px}.tag{display:inline-block;color:var(--cyan);background:#55e6df12;border:1px solid #55e6df30;border-radius:50px;padding:4px 9px;font-size:.72rem;font-weight:700;letter-spacing:.04em}.equipment-body h3{margin:12px 0 7px;font-size:1.2rem}.equipment-body p{color:var(--muted);font-size:.9rem;margin:0}
+    .trade-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}.trade-image-wrap{position:relative}.trade-image{width:100%;height:470px;object-fit:cover;border-radius:22px;border:1px solid var(--line)}.trade-badge{position:absolute;right:-14px;bottom:25px;background:var(--lime);color:#071526;border-radius:14px;padding:16px 19px;font-weight:700;box-shadow:var(--shadow)}.trade-copy h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;letter-spacing:-.05em;margin:15px 0}.trade-copy>p{color:var(--muted)}.trade-list{list-style:none;padding:0;margin:25px 0;display:grid;gap:14px}.trade-list li{display:flex;gap:12px;color:#d7e1ea}.trade-list .tick{flex:0 0 25px;height:25px;display:grid;place-items:center;border-radius:8px;background:#c8ff6819;color:var(--lime);font-weight:900}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}.process-step{border-top:1px solid #55e6df70;padding:22px 18px 15px;background:linear-gradient(180deg,#55e6df0a,transparent);counter-increment:step}.process-step:before{content:"0" counter(step);font:700 1.5rem 'Space Grotesk';color:var(--lime)}.process-step h3{margin:14px 0 7px;font-size:1.1rem}.process-step p{margin:0;color:var(--muted);font-size:.9rem}
+    .cta-band{padding:0 0 90px}.cta-inner{padding:42px;background:linear-gradient(110deg,#123c50,#12314a 60%,#1b3b3c);border:1px solid #55e6df42;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:25px;overflow:hidden;position:relative}.cta-inner:after{content:"";position:absolute;width:240px;height:240px;border:1px solid #c8ff6830;border-radius:50%;right:22%;top:-140px;box-shadow:0 0 0 28px #c8ff6808,0 0 0 56px #c8ff6805}.cta-inner h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.1;margin:0 0 8px;letter-spacing:-.04em}.cta-inner p{color:#b9cbd8;margin:0}.cta-inner>*{position:relative;z-index:1}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.contact-info h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.05em;margin:15px 0}.contact-info>p{color:var(--muted)}.contact-detail{display:flex;gap:13px;margin-top:24px;align-items:flex-start}.contact-detail .service-icon{flex:0 0 45px;width:45px;height:45px;margin:0;font-size:1.15rem}.contact-detail strong{display:block}.contact-detail small{color:var(--muted)}.contact-form{padding:28px;background:#0c2238;border:1px solid var(--line);border-radius:18px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px;margin-bottom:15px}.field label{font-size:.85rem;color:#d7e3ed;font-weight:600}.field input,.field textarea,.field select{width:100%;padding:13px 14px;border-radius:9px;background:#071829;border:1px solid #ffffff20;color:white;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #55e6df14}.field textarea{min-height:115px;resize:vertical}.form-note{font-size:.78rem;color:var(--muted);margin:12px 0 0}.form-status{color:var(--lime);font-size:.9rem;margin-top:12px;display:none}
+    footer{border-top:1px solid var(--line);background:#04101e;padding:27px 0;color:var(--muted);font-size:.84rem}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--cyan)}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:900px){.hero-grid,.trade-layout,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:40px}.hero-visual{max-width:650px}.hero-image{height:420px}.float-card{left:12px}.services-grid,.equipment-grid{grid-template-columns:repeat(2,1fr)}.trust-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.trade-image{height:380px}.trade-badge{right:12px}.cta-inner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:650px){.topline .container{justify-content:center;text-align:center}.nav{min-height:67px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:67px;background:#071526;border-bottom:1px solid var(--line);padding:18px 4%;flex-direction:column;align-items:stretch;gap:16px}.navlinks.open{display:flex}.navlinks .nav-cta{text-align:center}.hero{padding:65px 0 55px}.hero-grid{gap:32px}.hero-image{height:330px}.hero h1{font-size:clamp(2.55rem,12vw,3.8rem)}section{padding:65px 0}.services-grid,.equipment-grid{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr 1fr;gap:17px 10px}.trust-item{font-size:.8rem;align-items:flex-start}.trust-icon{flex:0 0 35px;width:35px;height:35px}.process-grid{grid-template-columns:1fr 1fr}.process-step{padding:17px 12px}.form-row{grid-template-columns:1fr;gap:0}.contact-form{padding:20px}.cta-band{padding-bottom:65px}.cta-inner{padding:28px 23px}.footer-inner{flex-direction:column;align-items:flex-start}.trade-image{height:320px}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="container"><span><strong>Electronics engineering</strong> · Repair, service, test & trade</span><span>Industrial electronics support for businesses and workshops</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="CircuitForge Engineering home"><span class="brand-mark">⌁</span><span>CIRCUITFORGE<small>Engineering solutions</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="navlinks" id="navLinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#equipment">Equipment</a><a href="#trade">Board trading</a><a href="#process">Our process</a><a href="#contact" class="nav-cta">Request a quote ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <div class="eyebrow">Precision • Reliability • Practical engineering</div>
+          <h1>When electronics fail, <span>we find the fault.</span></h1>
+          <p class="hero-copy">A dedicated electronics engineering service for circuit board repair, industrial electronic servicing, equipment diagnostics, and the purchase and sale of tested boards and components.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contact">Discuss your repair <span>↗</span></a><a class="btn btn-secondary" href="#services">Explore services ↓</a></div>
+          <div class="hero-points"><span><b class="check">✓</b> Fault diagnosis</span><span><b class="check">✓</b> Board-level repair</span><span><b class="check">✓</b> Service & sourcing</span></div>
+        </div>
+        <div class="hero-visual reveal delay-2">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85" alt="Engineer working with technical equipment">
+          <div class="image-overlay"></div>
+          <div class="float-card"><strong><span class="status-dot"></span>Diagnostics first</strong><small>Inspect · Test · Repair · Verify</small></div>
+        </div>
+      </div>
+    </section>
+    <div class="trust-strip"><div class="container trust-grid">
+      <div class="trust-item"><span class="trust-icon">⌘</span><span>PCB & control-board repair</span></div>
+      <div class="trust-item"><span class="trust-icon">⌁</span><span>Industrial electronics servicing</span></div>
+      <div class="trust-item"><span class="trust-icon">↔</span><span>Buy, sell & source boards</span></div>
+      <div class="trust-item"><span class="trust-icon">◉</span><span>Testing-led workflow</span></div>
+    </div></div>
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal"><div class="eyebrow">What we do</div><h2>Electronic problems, handled systematically.</h2><p>From component-level faults to complex control systems, each job begins with an assessment and a clear scope of work. Repairability and parts availability are confirmed before proceeding.</p></div>
+        <div class="services-grid">
+          <article class="service-card reveal"><div class="service-icon">▦</div><h3>PCB & Circuit Board Repair</h3><p>Visual inspection, track and pad repair, solder-joint rework, connector replacement, component-level troubleshooting, and functional checks for compatible boards.</p><a class="text-link" href="#contact">Enquire about a board <span>→</span></a></article>
+          <article class="service-card reveal delay-1"><div class="service-icon">ϟ</div><h3>Power Electronics</h3><p>Fault assessment for SMPS units, power supplies, inverter boards, UPS electronics, rectifier sections, and related power-control circuits.</p><a class="text-link" href="#contact">Discuss power faults <span>→</span></a></article>
+          <article class="service-card reveal delay-2"><div class="service-icon">⌘</div><h3>Industrial Control Electronics</h3><p>Diagnostics for PLC and HMI boards, machine-control cards, I/O modules, relay boards, sensor interfaces, and electronic control assemblies.</p><a class="text-link" href="#contact">Review your equipment <span>→</span></a></article>
+          <article class="service-card reveal"><div class="service-icon">◉</div><h3>Machinery Service & Repair</h3><p>Initial inspection and troubleshooting for selected machinery with electronic control systems, including control faults, wiring issues, and board-related failures.</p><a class="text-link" href="#contact">Check serviceability <span>→</span></a></article>
+          <article class="service-card reveal delay-1"><div class="service-icon">⌁</div><h3>Testing & Preventive Service</h3><p>Connector and wiring checks, visual inspection, electrical measurements, basic functional testing, and maintenance recommendations where appropriate.</p><a class="text-link" href="#contact">Plan a service visit <span>→</span></a></article>
+          <article class="service-card reveal delay-2"><div class="service-icon">⇄</div><h3>Board Purchase & Sale</h3><p>Enquiries for surplus, used, refurbished, obsolete, or replacement circuit boards. Availability, condition, compatibility, and testing status are confirmed per item.</p><a class="text-link" href="#trade">Explore board trading <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+    <section class="dark-section" id="equipment">
+      <div class="container">
+        <div class="section-head center reveal"><div class="eyebrow">Equipment categories</div><h2>Specialist support for selected machinery.</h2><p>These are example categories to help customers identify the kind of equipment they need assistance with. Final acceptance depends on make, model, fault, parts availability, and inspection.</p></div>
+        <div class="equipment-grid">
+          <article class="equipment-card reveal"><img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=900&q=80" alt="Industrial automation equipment"><div class="equipment-body"><span class="tag">AUTOMATION</span><h3>PLC, HMI & Control Panels</h3><p>Controller cards, operator panels, I/O modules, power sections, and machine-control troubleshooting.</p></div></article>
+          <article class="equipment-card reveal delay-1"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80" alt="Industrial machinery and workshop"><div class="equipment-body"><span class="tag">MACHINE TOOLS</span><h3>CNC & Motion Control Boards</h3><p>Initial diagnosis of compatible CNC control electronics, axis interface cards, and motion-control systems.</p></div></article>
+          <article class="equipment-card reveal delay-2"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80" alt="Technician testing industrial electronics"><div class="equipment-body"><span class="tag">DRIVES</span><h3>VFD & Servo Drives</h3><p>Assessment of drive electronics, control boards, power-stage symptoms, and associated interface faults.</p></div></article>
+          <article class="equipment-card reveal"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80" alt="Engineer inspecting electrical components"><div class="equipment-body"><span class="tag">POWER SYSTEMS</span><h3>UPS, Inverters & SMPS</h3><p>Inspection and repair assessment for compatible power supplies and backup-power electronics.</p></div></article>
+          <article class="equipment-card reveal delay-1"><img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=900&q=80" alt="Electronics engineering testing bench"><div class="equipment-body"><span class="tag">TEST EQUIPMENT</span><h3>Electronic Test Instruments</h3><p>Fault assessment for selected instruments, measurement equipment, and their power or display circuitry.</p></div></article>
+          <article class="equipment-card reveal delay-2"><img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=80" alt="Engineer working on a circuit assembly"><div class="equipment-body"><span class="tag">CUSTOM SYSTEMS</span><h3>Special-purpose Machines</h3><p>Case-by-case support for specialised equipment with electronic control, sensing, or interface assemblies.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="trade">
+      <div class="container trade-layout">
+        <div class="trade-image-wrap reveal"><img class="trade-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85" alt="Circuit board and electronic components"><div class="trade-badge">Boards • Components • Sourcing</div></div>
+        <div class="trade-copy reveal delay-1"><div class="eyebrow">Circuit board exchange</div><h2>Buy, sell or source the board you need.</h2><p>We welcome enquiries for new, used, surplus, obsolete, refurbished, and replacement electronic boards. Share the part number and clear photos so compatibility and condition can be assessed before any transaction.</p>
+          <ul class="trade-list"><li><span class="tick">✓</span><span><strong>For buyers:</strong> Send the board number, machine make/model, and required quantity.</span></li><li><span class="tick">✓</span><span><strong>For sellers:</strong> Share part numbers, quantity, condition, and available test records.</span></li><li><span class="tick">✓</span><span><strong>For sourcing:</strong> We can review your requirement and confirm whether a suitable option can be located.</span></li><li><span class="tick">✓</span><span><strong>Transparent condition:</strong> New, used, repaired, or untested status should be stated clearly for each item.</span></li></ul>
+          <a class="btn btn-primary" href="#contact">Send a board enquiry ↗</a>
+        </div>
+      </div>
+    </section>
+    <section class="dark-section" id="process">
+      <div class="container">
+        <div class="section-head reveal"><div class="eyebrow">How it works</div><h2>A clear process, from fault report to testing.</h2><p>We aim to keep the service process practical and easy to understand, with approval before work that goes beyond the initial assessment.</p></div>
+        <div class="process-grid">
+          <div class="process-step reveal"><h3>Share details</h3><p>Send photos, make/model, part number, symptoms, and any error codes.</p></div>
+          <div class="process-step reveal delay-1"><h3>Assessment</h3><p>Review the fault, likely scope, inspection needs, and parts availability.</p></div>
+          <div class="process-step reveal delay-2"><h3>Quote & approval</h3><p>Confirm estimated cost, timing, and repair limitations before proceeding.</p></div>
+          <div class="process-step reveal delay-3"><h3>Repair & verify</h3><p>Carry out agreed work and perform suitable checks before handover.</p></div>
+        </div>
+      </div>
+    </section>
+    <div class="cta-band"><div class="container"><div class="cta-inner reveal"><div><h2>Have a faulty board or machine?</h2><p>Tell us what it is, what it does, and what has gone wrong.</p></div><a class="btn btn-primary" href="#contact">Request an assessment ↗</a></div></div></div>
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal"><div class="eyebrow">Contact our team</div><h2>Let's diagnose the next step.</h2><p>Use the enquiry form to prepare a repair, servicing, sourcing, or board-trading request. Replace the sample contact details below with your real business information before publishing.</p>
+          <div class="contact-detail"><div class="service-icon">✉</div><div><strong>Email</strong><small>your-email@example.com</small></div></div>
+          <div class="contact-detail"><div class="service-icon">☎</div><div><strong>Phone / WhatsApp</strong><small>+91 XXXXX XXXXX</small></div></div>
+          <div class="contact-detail"><div class="service-icon">⌖</div><div><strong>Workshop / Service area</strong><small>Add your city, state and service coverage</small></div></div>
+        </div>
+        <form class="contact-form reveal delay-1" id="enquiryForm">
+          <div class="form-row"><div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Full name"></div><div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required type="tel" placeholder="+91"></div></div>
+          <div class="form-row"><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@company.com"></div><div class="field"><label for="service">Enquiry type *</label><select id="service" name="service" required><option value="">Choose a service</option><option>PCB / circuit board repair</option><option>Machinery servicing</option><option>Industrial electronics repair</option><option>Buy a circuit board</option><option>Sell a circuit board</option><option>Source a component / board</option><option>Other enquiry</option></select></div></div>
+          <div class="field"><label for="details">Equipment details and fault *</label><textarea id="details" name="details" required placeholder="Make/model, board number, symptoms, quantity, and any relevant details..."></textarea></div>
+          <button class="btn btn-primary" type="submit">Prepare enquiry message ↗</button>
+          <p class="form-note">This demo form opens an email draft on your device. To receive enquiries automatically, connect a form service or your hosting provider's form handler before launch.</p>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><div>© <span id="year"></span> CircuitForge Engineering. All rights reserved.</div><div class="footer-links"><a href="#services">Services</a><a href="#equipment">Equipment</a><a href="#trade">Board trading</a><a href="#contact">Contact</a></div><div>Built for practical engineering.</div></div></footer>
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const navLinks=document.getElementById('navLinks');
+    menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰';});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));
+    document.getElementById('enquiryForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const data=new FormData(this);
+      const subject=encodeURIComponent('Website enquiry: '+data.get('service'));
+      const body=encodeURIComponent('Name: '+data.get('name')+'\nPhone: '+data.get('phone')+'\nEmail: '+(data.get('email')||'Not provided')+'\nEnquiry type: '+data.get('service')+'\n\nDetails:\n'+data.get('details'));
+      const destination='your-email@example.com';
+      const status=document.getElementById('formStatus');
+      if(destination==='your-email@example.com'){
+        status.style.display='block';
+        status.textContent='Demo mode: replace your-email@example.com in the HTML with your real business email to enable the email draft.';
+        return;
+      }
+      status.style.display='block';status.textContent='Opening your email app with the enquiry details…';
+      window.location.href='mailto:'+destination+'?subject='+subject+'&body='+body;
+    });
+  </script>
+</body>
+</html>
